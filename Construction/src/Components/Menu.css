@@ -1,0 +1,107 @@
+/* Menu Overlay Base */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh;
+    /* height: 100vh; */
+    background-color: #0b1121;
+    /* Deep midnight blue */
+    z-index: 999999 !important;
+    /* Extremely high priority */
+    font-family: "Inter", sans-serif;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    /* Ensure it takes layout */
+    visibility: visible !important;
+    /* Force visibility */
+    pointer-events: auto;
+    /* Ensure clicks register */
+}
+
+/* Close Button - Yellow Circle */
+.close-btn {
+    background: #f6bd2c;
+    /* Amber yellow */
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    background-color: #f59e0b;
+}
+
+/* Menu Links Typography */
+.menu-link {
+    font-family: "Inter", sans-serif;
+    /* Or serif if requested, screenshot looks sans-serif for menu items */
+    font-weight: 300;
+    padding-left: 45px;
+    letter-spacing: -0.0em;
+    transition: opacity 0.3s;
+    font-size: 2rem;
+    position: relative;
+    /* Anchor for nav-dot */
+    /* Large size */
+}
+
+/* Active Dot Indicator */
+.nav-dot {
+    position: absolute;
+    left: 15px;
+    /* Position inside padding-left area */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #fcd34d;
+    /* Amber to match menu btn */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(252, 211, 77, 0.4);
+}
+
+@media (max-width: 1400px) {
+    .menu-link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-link {
+        font-size: 0.9rem;
+        /* Smaller for phones */
+        letter-spacing: 0;
+    }
+}
+
+.menu-link:hover {
+    opacity: 0.8;
+}
+
+/* Hover White Utility */
+.hover-white:hover {
+    color: white !important;
+}
+
+/* Background Utility for icons */
+.bg-white-10 {
+    background-color: rgba(255, 255, 255, 0.1);
+}

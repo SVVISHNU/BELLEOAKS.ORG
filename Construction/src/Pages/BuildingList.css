@@ -1,0 +1,43 @@
+.building-list-page {
+    background-color: #ffffff;
+    /* White bg as per screenshot */
+    min-height: 100vh;
+    padding: 140px 5vw 50px 5vw;
+    /* Top padding for fixed navbar */
+    font-family: "Georgia", serif;
+}
+
+.tracking-wide {
+    letter-spacing: 0.1em;
+}
+
+.building-row {
+    border-color: #f0f0f0 !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.building-row:hover {
+    background-color: #fafafa;
+}
+
+.building-name {
+    color: #e0e0e0;
+    /* Faint grey initially */
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.building-row:hover .building-name {
+    color: #1a1a1a;
+    /* Dark on hover */
+}
+
+/* Ensure HoverText inherits color correctly */
+.building-name div {
+    display: inline-block;
+}
+
+.text-light-grey {
+    color: #d1d1d1;
+}

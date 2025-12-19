@@ -1,0 +1,241 @@
+/* Navbar Base Styles */
+.navbar {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    width: 95%;
+    /* Responsive width */
+    max-width: 1400px;
+    /* Max width constraint */
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    /* Pill shape */
+    height: 80px;
+    /* Fixed height */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-scrolled {
+    top: 1rem;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+/* Status Indicator (Left) */
+.navbar-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.dots {
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Center Logo */
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: #1e293b;
+    /* Dark slate */
+}
+
+/* Right Section */
+.navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Common Button Styles */
+.dropdown-btn,
+.menu-btn {
+    background: white;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    color: #1f2937;
+    height: 48px;
+    outline: none;
+}
+
+.dropdown-btn:hover {
+    border-color: #d1d5db;
+}
+
+.dropdown-btn.active {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+/* Menu Button specific */
+.menu-btn {
+    background-color: #fcd34d;
+    /* Amber/Yellow for menu */
+    border-color: #fcd34d;
+    color: #111;
+}
+
+.menu-btn:hover {
+    background-color: #fbbf24;
+    border-color: #fbbf24;
+}
+
+
+/* Dropdown Wrapper & Content */
+.dropdown-wrapper {
+    position: relative;
+}
+
+/* Dropdown Menu Container */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 2rem;
+    background: transparent;
+    /* Transparent wrapper */
+    border: none;
+    box-shadow: none;
+    display: flex;
+    /* Changed to flex for horizontal cards */
+    flex-direction: row;
+    /* Arrange cards horizontally */
+    gap: 1rem;
+    /* Space between cards */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    padding: 0;
+    min-width: 500px;
+    /* Wide enough for two cards */
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Individual Selection Cards (The Pills) */
+.selection-card {
+    background-color: white;
+    border-radius: 50rem;
+    /* Full Pill Shape */
+    padding: 10px 25px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.selection-card:hover {
+    background-color: #e3e3e3;
+    /* Very light hover */
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    transition: background-color 0.2s;
+}
+
+.selection-card:hover .icon-circle {
+    background-color: #e5e7eb;
+    color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar {
+        width: 95%;
+        padding: 0.8rem 1.5rem;
+        top: 0.5rem;
+        /* Reduce top gap for mobile */
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+        /* Ensure spreading */
+    }
+
+    .status-indicator,
+    .navbar-left {
+        display: none !important;
+        /* Hide left section */
+    }
+
+    .navbar-center {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        justify-content: flex-start;
+        flex: 1;
+        /* Take up space */
+    }
+
+    .navbar-center .text-center {
+        text-align: left !important;
+    }
+
+    .navbar-right {
+        flex: 0;
+        /* Shrink to fit content */
+    }
+
+    .dropdown-wrapper {
+        display: none;
+        /* Hide apartments dropdown on tablet/mobile for simplicity, or adapt */
+    }
+}

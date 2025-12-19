@@ -1,0 +1,107 @@
+.infinity-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.infinity-carousel-track {
+    display: flex;
+    gap: 2rem;
+    will-change: transform;
+}
+
+.infinity-carousel-item {
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infinity-carousel-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-card {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.carousel-card:hover .carousel-card-overlay {
+    background: linear-gradient(to top, rgba(99, 102, 241, 0.95) 0%, rgba(139, 92, 246, 0.8) 60%, transparent 100%);
+}
+
+.carousel-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.carousel-card-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .infinity-carousel-track {
+        gap: 1rem;
+    }
+
+    .carousel-card {
+        width: 280px;
+        height: 380px;
+    }
+
+    .carousel-card-overlay {
+        padding: 1.5rem;
+    }
+
+    .carousel-card-title {
+        font-size: 1.25rem;
+    }
+
+    .carousel-card-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        width: 240px;
+        height: 320px;
+    }
+
+    .carousel-card-overlay {
+        padding: 1rem;
+    }
+
+    .carousel-card-title {
+        font-size: 1.1rem;
+    }
+}

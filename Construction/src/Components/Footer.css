@@ -1,0 +1,160 @@
+.footer {
+  background: #1d2b5b;
+  color: #ffffff;
+  padding: 50px 60px 10px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* MAIN CONTAINER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  /* Constrain width for alignment */
+  width: 100%;
+  margin: 0 auto;
+  /* Center the container */
+}
+
+/* LEFT */
+.footer-left {
+  max-width: 320px;
+}
+
+.footer-label {
+  color: #ffcc66;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.679);
+  width: fit-content;
+  /* Ensure hover targets text only */
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+/* SOCIAL */
+.social {
+  margin: 30px 0;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* BUTTON */
+.visit-btn {
+  margin-top: 20px;
+  background: #ffffff;
+  color: #1d2b5b;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.visit-btn:hover {
+  transform: scale(1.05);
+  /* Subtle pop effect */
+}
+
+/* RIGHT */
+.footer-right {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.footer-column h4 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 14px;
+  font-size: 16px;
+  width: fit-content;
+  /* Critical for HoverText to work cleanly */
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 60px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  font-weight: 900px;
+  color: rgba(231, 231, 231, 0.437);
+}
+
+.footer-bottom-links a {
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-right {
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-bottom-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,72 @@
+.amenities-page {
+    background-color: #1e2a55;
+    /* Default to Dark Blue for the main scroll part */
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.intro-section {
+    background-color: #f6f3ee;
+    color: #1e2a55;
+    position: relative;
+    z-index: 10;
+    /* Ensure it sits above if needed */
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.intro-section h1,
+.intro-section p {
+    color: #1e2a55;
+}
+
+.sticky-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    text-align: center;
+    width: 100%;
+    height: 0;
+    /* Don't take up space in flow */
+    mix-blend-mode: overlay;
+    /* Optional: Cool effect */
+    pointer-events: none;
+}
+
+.scroll-section {
+    min-height: 80vh;
+    /* Space out images */
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.final-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e2a55;
+    position: relative;
+    z-index: 3;
+    /* Cover the sticky title */
+}
+
+.text-gold {
+    color: #ffd700;
+    /* Approximate gold color */
+}
+
+/* Override previous styles if needed */
+.amenities-page .display-1 {
+    font-weight: 400;
+}

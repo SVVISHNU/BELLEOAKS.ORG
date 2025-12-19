@@ -1,0 +1,147 @@
+/* Wrapper */
+.contact-wrapper {
+  background: #f0f0ef;
+  padding: 140px 20px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.contact-card {
+  width: 100%;
+  height: 600px;
+  max-width: 850px;
+  box-shadow: #1e2a5a;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* Title */
+.contact-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1e2a5a;
+  margin-bottom: 10px;
+}
+
+.contact-title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Subtitle */
+.contact-subtitle {
+  color: #7c83a0;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+/* Form */
+.contact-form {
+  width: 100%;
+}
+
+/* Inputs row */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #cfd3e2;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: none;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note {
+  color: #7c83a0;
+  font-size: 14px;
+}
+
+/* Button */
+.send-btn {
+  background: #dedada;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1e2a5a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Contact info */
+.contact-info {
+  margin-top: 50px;
+  color: #1e2a5a;
+  font-size: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  color: #7c83a0;
+}
+
+.contact-info .mail {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+/* ------------------ Responsive ------------------ */
+
+@media (max-width: 992px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .contact-card {
+    padding: 40px 30px;
+  }
+
+  .contact-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 30px;
+  }
+}
